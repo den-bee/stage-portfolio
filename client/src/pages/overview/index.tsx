@@ -2,7 +2,7 @@ import styles from "@/pages/overview/Overview.module.css";
 import {Posts} from "@/types";
 
 export const getStaticProps = async () => {
-  const response = await fetch("http://host.docker.internal:1338/api/posts", {
+  const response = await fetch("https://blog-backend-dcxu.onrender.com/api/posts", {
     headers: {
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`
     }
