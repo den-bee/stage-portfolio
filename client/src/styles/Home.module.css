@@ -1,10 +1,31 @@
 .content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     height: 100vh;
 }
 
 .postList {
-    margin-top: 50px
+    width: 600px;
+    margin: 50px 0px 50px 0px;
+    list-style: none;
+    padding: 0px 50px 0px 50px;
+}
+
+.postList li {
+    margin: 10px;
+}
+
+.title {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.olderButton {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: grey;
+    border: 1px solid black;
 }
