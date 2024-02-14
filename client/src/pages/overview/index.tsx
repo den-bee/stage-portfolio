@@ -28,6 +28,7 @@ const Overview = ({posts} : Posts) => {
             <div key={post.id}>
               <li className={styles.title}>{post.attributes.title}</li>
               <li dangerouslySetInnerHTML={{ __html: marked.parse(post.attributes.content) }} />
+              <hr className={styles.line} />
             </div>
           )
         })}

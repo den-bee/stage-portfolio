@@ -20,19 +20,14 @@ export const getStaticProps = async () => {
 
 const Home = ({posts} : Posts) => {
   const marked = new Marked();
+  const index = posts.data.length-1;
   
   return (
     <main className={styles.content}>
-      <ul className={styles.postList}>
-        {posts.data.map((post) => {
-          return (
-            <div key={post.id}>
-              <li className={styles.title}>{post.attributes.title}</li>
-              <li dangerouslySetInnerHTML={{ __html: marked.parse(post.attributes.content) }} />
-            </div>
-          )
-        })}
-      </ul>
+      <div className={styles.post}>
+        <h3 className={styles.title}>{posts.data[index].attributes.title}</h3>
+        <p dangerouslySetInnerHTML={{ __html: marked.parse(posts.data[index].attributes.content) }} />
+      </div>
       <Link href="/overview" className={styles.olderButton}>
         <p>Show older</p>
       </Link>

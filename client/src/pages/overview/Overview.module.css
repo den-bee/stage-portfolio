@@ -1,6 +1,7 @@
 .content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     height: 100vh;
@@ -14,10 +15,15 @@
 }
 
 .postList li {
-    margin: 10px;
+    margin: 30px;
 }
 
 .title {
     font-weight: bold;
     padding-bottom: 10px;
+}
+
+.line {
+    width: 450px;
+    margin: 0 auto;
 }
